@@ -11,7 +11,7 @@ from myBlog.basestate import state
 # Add state and page to the app.
 app = pc.App(state=state)
 app.add_page(index,title="Xiaoguang's Blog")
-app.add_page(bloglist,title="Xiaoguang's Blog",on_load=bloglistState.define_min_max)
+app.add_page(bloglist,title="Xiaoguang's Blog")
 app.add_page(about,title="Xiaoguang's Blog")
 app.add_page(seuquencetools,title="Xiaoguang's Blog")
 app.add_page(excel2shell,title="Xiaoguang's Blog")

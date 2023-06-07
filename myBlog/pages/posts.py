@@ -71,28 +71,15 @@ class postState(state):
 
 def post()->pc.component:
     return pc.box(
-        navbar(),
-        pc.box(
-            pc.hstack(
-                pc.vstack(
-                    pc.box(pc.heading("Content:",size="lg",color="black"),width="100%"),
-                           pc.foreach(postState.get_contents.header,eachtocs),
-                           width="15%",
-                           pt="10%"),
-                pc.box(
-                    pc.heading(postState.get_contents.title,size="lg"),
+            navbar(),
+            pc.vstack(pc.box(pc.heading(postState.get_contents.title,size="lg"),
                     pc.divider(),
                     pc.box(pc.text("author: "+postState.get_contents.author,color="grey",font_size="1.1em"),mb="1em"),
                     pc.markdown(postState.get_contents.content),
                     padding="10%",
                     line_height="2em",
-                    width="85%",
+                    width="80%",
                     style=Style,
-                 ),
-        align_items="start",
-        pl="10%",
-        pr="10%"
-        
-    ),
-        ),
+                 ),),
+            
     )

@@ -6,14 +6,15 @@ from myBlog.pages.about import about
 from myBlog.pages.sequenceTools import seuquencetools
 from myBlog.pages.excel2shell import excel2shell
 from myBlog.basestate import state
-
+from myBlog.pages.write import writepage
 
 # Add state and page to the app.
 app = pc.App(state=state)
 app.add_page(index,title="Xiaoguang's Blog")
-app.add_page(bloglist,title="Xiaoguang's Blog")
+app.add_page(bloglist,title="Xiaoguang's Blog",on_load=bloglistState.get_total)
 app.add_page(about,title="Xiaoguang's Blog")
 app.add_page(seuquencetools,title="Xiaoguang's Blog")
 app.add_page(excel2shell,title="Xiaoguang's Blog")
+app.add_page(writepage,title="Xiaoguang's Blog")
 app.add_page(post,route="/post/[path]",title="Xiaoguang's Blog")
 app.compile()
